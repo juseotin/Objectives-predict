@@ -139,7 +139,7 @@ Result: observed differnce: 0.3 p-value = 1, fail to reject the null hypothesis.
 
 Type: Classification (Binary Classification)
 
-Prediction Problem: Predict whether a team wins the game based on their performance in the first three events.
+Prediction Problem: Predict whether a team wins the game based on their performance in the jungle laner's KDA and the first three events.
 
 Response Variable: The response variable is result, which indicates whether the team won (1) or lost (0) the game. This binary outcome is crucial for understanding the effectiveness of early game advantages in determining the final outcome of the game.
 
@@ -153,16 +153,40 @@ Reason for Choosing F1-score:
 
 At the "time of prediction," we use information from the first three events, which are part of the early game. This ensures that our model is practical and can be applied in real-time scenarios, where decisions and predictions need to be made based on the ongoing game's current state.
 
-In this classification problem, we're predicting whether a team will win based on early game events. We use features available at the time of prediction to ensure the model's practicality. The F1-score is chosen as the evaluation metric due to its suitability for potentially imbalanced datasets, providing a balanced measure of precision and recall.
+In this classification problem, we're predicting whether a team will win based on the jungle laner's performance early game events. We use features available at the time of prediction to ensure the model's practicality. The F1-score is chosen as the evaluation metric due to its suitability for potentially imbalanced datasets, providing a balanced measure of precision and recall.
 
 ## Baseline Model 
 
 Model Type: Random Forest Classifier
-Features:
+
+# Features
 Categorical Features: event1(Encoded using OneHotEncoder)
+
 Quantitative Features: Red_More_Objectives(Binary indicator if the Red team had more objectives in the first three events), redJungleKDA(KDA score for the Red team's jungler.)
 
-Performance Evaluation
 F1-score: 0.645
 
-I believe my current model is good, however I would like to 
+I believe my current model is good since it would catch if it is the jungle laner who contributes the most to loss of both objectives and a game, however, with a importance of 0.8 in redJungleKDA, I would like to add the difference between the KDA of the jungle laners in each team for a better prediction. 
+
+## Final Model
+
+Model Type: Random Forest Classifier
+
+# Hyperparameters that worked the best
+
+Number of Trees (n_estimators): Controls the number of trees in the forest.
+
+Maximum Depth (max_depth): Controls the maximum depth of the trees.
+
+Minimum Samples Split (min_samples_split): The minimum number of samples required to split an internal node.
+
+# Features
+
+Categorical Features: event1(Encoded using OneHotEncoder)
+
+Quantitative Features: Red_More_Objectives(Binary indicator if the Red team had more objectives in the first three events), redJungleKDA(KDA score for the Red team's jungler),Total_Objectives(Sum of blueJungleGP and redJungleGP),KDA_Difference(Difference between blueJungleKDA and redJungleKDA)
+
+F1-score: 0.695
+
+Conclusion
+I decided to add the Total_Objectives since I am trying to find the relation between the objectives and the game result in a bigger pie. Before I built the baseline model, the first three objectives were not significant to the result of the game, so I started thinking about the position related to taking objectives which is jungle laner. I added the columns comparing the KDA of the jungle laners in each team so it could include the part that was never brought up before, and was found highly important. By adding new features (Total_Objectives and KDA_Difference) and the best working the hyperparameters, the final model is expected to improve upon the baseline model. The pipeline ensures that all preprocessing steps and model training are performed in a single step, making the process efficient and reproducible.
