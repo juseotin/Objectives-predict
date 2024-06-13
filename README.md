@@ -14,6 +14,7 @@ League of Legends is a complex game where early game advantages can snowball int
 
 The columns we are interested in to answer our question include: “event1”, “event2”, “event3”, “blueJungleGP”, “blueJungleKDA”, “redJungleGP”, “redJungleKDA”, and “result”. These columns provide information about the early game events, jungle performance, and the final result of each match. By analyzing these columns, we can determine the influence of specific events on the game's outcome.
 
+* game: Game ID of the player
 * event1: The first significant event in the game, such as the first tower taken or first blood.
 * event2: The second significant event in the game.
 * event3: The third significant event in the game.
