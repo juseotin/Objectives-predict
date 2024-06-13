@@ -18,7 +18,14 @@ The columns we are interested in to answer our question include: “event1”, �
 * event2: The second significant event in the game.
 * event3: The third significant event in the game.
 
-*blueJungleKDA: Kill-Death-Assist ratio of the Blue team's jungler.
+* blueJungleKDA: Kill-Death-Assist ratio of the Blue team's jungler.
 
-*redJungleKDA: Kill-Death-Assist ratio of the Red team's jungler.
-result: The final outcome of the game (1 for a win, 0 for a loss).
+* redJungleKDA: Kill-Death-Assist ratio of the Red team's jungler.
+* result: The final outcome of the game (1 for a win, 0 for a loss).
+
+I created additional columns,
+
+* First_Event_Red: Indicates whether the first event was advantageous for the Red team (1) or the Blue team (0).
+* Second_Event_Red: Indicates whether the second event was advantageous for the Red team (1) or the Blue team (0).
+* Third_Event_Red: Indicates whether the third event was advantageous for the Red team (1) or the Blue team (0).
+* Red_More_Objectives: A boolean indicating whether the Red team secured more objectives in the first three events.
