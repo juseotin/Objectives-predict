@@ -128,10 +128,27 @@ This also means that the game competition takes a good care of preventing the un
 ## Hypothesis Testing
 
 There were no missing values in the data I used. 
-Null Hypothesis: Teams that took advantages in the first three events are equally likely to win compared to teams that did not.
-Alternative Hypothesis: Teams that took advantages in the first three events are more likely to win compared to teams that did not.
+* Null Hypothesis: Teams that took advantages in the first three events are equally likely to win compared to teams that did not.
+* Alternative Hypothesis: Teams that took advantages in the first three events are more likely to win compared to teams that did not.
 
 The Null and Alternative Hypothesis came from the idea to figure out if the first three events are significant for the team winning to get to know about the relationship between objectives and game results. The test statistic was the difference between the game winning when took advantages in the first three events, and the game winning without taking advantages in the first, in a significance level of 5%.
 
 Result: observed differnce: 0.3 p-value = 1, fail to reject the null hypothesis. The observation we saw in our data did not happen due to random chance, so taking advantages in first three events is not related to winning the game.
 
+## Framing a Prediction Problem
+
+Type: Classification (Binary Classification)
+
+Prediction Problem: Predict whether a team wins the game based on their performance in the first three events.
+
+Response Variable: The response variable is result, which indicates whether the team won (1) or lost (0) the game. This binary outcome is crucial for understanding the effectiveness of early game advantages in determining the final outcome of the game.
+
+Evaluation Metric
+Chosen Metric: F1-score
+
+Reason for Choosing F1-score:
+
+Imbalance Handling: In competitive games, the distribution of wins and losses may not be perfectly balanced. The F1-score, which is the harmonic mean of precision and recall, is more informative for imbalanced datasets than accuracy, as it considers both false positives and false negatives.
+Model Performance: It provides a better measure of the incorrectly classified cases than the accuracy metric, especially when the class distribution is skewed.
+
+At the "time of prediction," we use information from the first three events, which are part of the early game. This ensures that our model is practical and can be applied in real-time scenarios, where decisions and predictions need to be made based on the ongoing game's current state.
