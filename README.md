@@ -36,4 +36,10 @@ I created additional columns,
 The raw data was loaded from a CSV file containing various match statistics for professional League of Legends games. Checked for any missing values in the dataset and decided to either fill them with appropriate values or drop them based on their significance. Removed the columns that are not being used, and added several new columns.
 * First_Event_Red, Second_Event_Red, Third_Event_Red: These columns were created to indicate whether the corresponding event was advantageous for the Red team (1) or the Blue team (0). This helps in understanding the impact of each event on the game's outcome.
 * Red_More_Objectives: This boolean column was created to indicate whether the Red team secured more objectives in the first three events. This feature helps in analyzing if securing more objectives early in the game has a significant impact on winning.
-* 
+
+<iframe
+  src="assets/eda1.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
