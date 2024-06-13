@@ -133,6 +133,13 @@ There were no missing values in the data I used.
 
 The Null and Alternative Hypothesis came from the idea to figure out if the first three events are significant for the team winning to get to know about the relationship between objectives and game results. The test statistic was the difference between the game winning when took advantages in the first three events, and the game winning without taking advantages in the first, in a significance level of 5%.
 
+<iframe
+  src="assets/Hypothesis.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
 Result: observed differnce: 0.3 p-value = 1, fail to reject the null hypothesis. The observation we saw in our data did not happen due to random chance, so taking advantages in first three events is not related to winning the game.
 
 ## Framing a Prediction Problem
@@ -158,7 +165,7 @@ In this classification problem, we're predicting whether a team will win based o
 
 Model Type: Random Forest Classifier
 
-# Features
+* Features
 Categorical Features: event1(Encoded using OneHotEncoder)
 
 Quantitative Features: Red_More_Objectives(Binary indicator if the Red team had more objectives in the first three events), redJungleKDA(KDA score for the Red team's jungler.)
@@ -179,7 +186,7 @@ Maximum Depth (max_depth): Controls the maximum depth of the trees.
 
 Minimum Samples Split (min_samples_split): The minimum number of samples required to split an internal node.
 
-# Features
+* Features
 
 Categorical Features: event1(Encoded using OneHotEncoder)
 
@@ -187,7 +194,13 @@ Quantitative Features: Red_More_Objectives(Binary indicator if the Red team had 
 
 F1-score: 0.695(increased from 0.65)
 
-Conclusion
+<iframe
+  src="assets/cm.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
 I decided to add the Total_Objectives since I am trying to find the relation between the objectives and the game result in a bigger pie. Before I built the baseline model, the first three objectives were not significant to the result of the game, so I started thinking about the position related to taking objectives which is jungle laner. I added the columns comparing the KDA of the jungle laners in each team so it could include the part that was never brought up before, and was found highly important. By adding new features (Total_Objectives and KDA_Difference) and the best working the hyperparameters, the final model is expected to improve upon the baseline model. The pipeline ensures that all preprocessing steps and model training are performed in a single step, making the process efficient and reproducible.
 
 
