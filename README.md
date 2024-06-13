@@ -186,7 +186,7 @@ Categorical Features: event1(Encoded using OneHotEncoder)
 
 Quantitative Features: Red_More_Objectives(Binary indicator if the Red team had more objectives in the first three events), redJungleKDA(KDA score for the Red team's jungler),Total_Objectives(Sum of blueJungleGP and redJungleGP),KDA_Difference(Difference between blueJungleKDA and redJungleKDA)
 
-F1-score: 0.695
+F1-score: 0.695(increased from 0.65)
 
 Conclusion
 I decided to add the Total_Objectives since I am trying to find the relation between the objectives and the game result in a bigger pie. Before I built the baseline model, the first three objectives were not significant to the result of the game, so I started thinking about the position related to taking objectives which is jungle laner. I added the columns comparing the KDA of the jungle laners in each team so it could include the part that was never brought up before, and was found highly important. By adding new features (Total_Objectives and KDA_Difference) and the best working the hyperparameters, the final model is expected to improve upon the baseline model. The pipeline ensures that all preprocessing steps and model training are performed in a single step, making the process efficient and reproducible.
