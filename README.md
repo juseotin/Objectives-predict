@@ -88,6 +88,8 @@ I made another bar chart which displays the rate for Red team to win while not p
 
   While In the process of an interesting aggregate, I created a pivot table to show the mean of Red team taking each event are the columns, and the result of the game as the rows. It highlights the relationship between early game events and the overall game outcome, providing insights into how critical securing early objectives can be for winning the game.
 
+  With this, the Red team tends to lose more games when the early game events (first, second, and third events) are advantageous to them. This is indicated by the lower average values for First_Event_Red, Second_Event_Red, and Third_Event_Red in games that were won (result = 1) compared to those that were lost (result = 0).
+
 
 |   First_Event_Red |   Second_Event_Red |   Third_Event_Red |
 |------------------:|-------------------:|------------------:|
