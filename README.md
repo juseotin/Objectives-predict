@@ -148,7 +148,21 @@ Chosen Metric: F1-score
 
 Reason for Choosing F1-score:
 
-Imbalance Handling: In competitive games, the distribution of wins and losses may not be perfectly balanced. The F1-score, which is the harmonic mean of precision and recall, is more informative for imbalanced datasets than accuracy, as it considers both false positives and false negatives.
-Model Performance: It provides a better measure of the incorrectly classified cases than the accuracy metric, especially when the class distribution is skewed.
+* Imbalance Handling: In competitive games, the distribution of wins and losses may not be perfectly balanced. The F1-score, which is the harmonic mean of precision and recall, is more informative for imbalanced datasets than accuracy, as it considers both false positives and false negatives.
+* Model Performance: It provides a better measure of the incorrectly classified cases than the accuracy metric, especially when the class distribution is skewed.
 
 At the "time of prediction," we use information from the first three events, which are part of the early game. This ensures that our model is practical and can be applied in real-time scenarios, where decisions and predictions need to be made based on the ongoing game's current state.
+
+In this classification problem, we're predicting whether a team will win based on early game events. We use features available at the time of prediction to ensure the model's practicality. The F1-score is chosen as the evaluation metric due to its suitability for potentially imbalanced datasets, providing a balanced measure of precision and recall.
+
+## Baseline Model 
+
+Model Type: Random Forest Classifier
+Features:
+Categorical Features: event1(Encoded using OneHotEncoder)
+Quantitative Features: Red_More_Objectives(Binary indicator if the Red team had more objectives in the first three events), redJungleKDA(KDA score for the Red team's jungler.)
+
+Performance Evaluation
+F1-score: 0.645
+
+I believe my current model is good, however I would like to 
