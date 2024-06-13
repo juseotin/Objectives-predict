@@ -95,3 +95,12 @@ I made another bar chart which displays the rate for Red team to win while not p
 |------------------:|-------------------:|------------------:|
 |          0.638691 |           0.610242 |          0.56899  |
 |          0.390387 |           0.410317 |          0.368113 |
+
+
+## Assessment of Missingness
+
+* NMAR Analysis
+  In the context of our dataset, I believe that the event1 column could be considered Not Missing At Random (NMAR). The reasoning is that the presence or absence of certain events might depend on the outcome or nature of the game itself, rather than being random or dependent on other observed variables. For instance, if event1 refers to a significant game event like the first tower taken, it might be missing because such an event did not occur in certain games. To explain the missingness of event1 and potentially make it Missing At Random (MAR), additional data like game duration would be useful.
+
+* Missingness Dependency
+  To investigate whether the missingness of event1 depends on the result column, I performed a permutation test.
