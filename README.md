@@ -1,7 +1,7 @@
-# Objectives-predict
+# Objectives-Winning Games(LOL)
 
 
-By Justin Seo
+By Justin Seo(miseo@ucsd.edu)
 ## Introduction
 
 Our dataset comprises all professional League of Legends games that took place in 2023. This dataset includes various match statistics, focusing on specific events and overall performance metrics. The dataset is extensive, containing detailed information on each game's events, team performances, and outcomes.
