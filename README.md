@@ -123,3 +123,15 @@ P-value: 1
 
 Observed difference indicates that there were no difference in the result of the game when there is a missingness of event1. With a P-value of 1, we fail to reject the null hypothesis, suggesting that the missingness of event1 is not significantly dependent on the game result.
 This also means that the game competition takes a good care of preventing the unknown accidents during the game, so it does not control the result of the game. By performing this analysis, I was able to gain insights into whether the missingness of event1 is potentially NMAR and consider additional data that might help transform it to MAR.
+
+
+## Hypothesis Testing
+
+There were no missing values in the data I used. 
+Null Hypothesis: Teams that took advantages in the first three events are equally likely to win compared to teams that did not.
+Alternative Hypothesis: Teams that took advantages in the first three events are more likely to win compared to teams that did not.
+
+The Null and Alternative Hypothesis came from the idea to figure out if the first three events are significant for the team winning to get to know about the relationship between objectives and game results. The test statistic was the difference between the game winning when took advantages in the first three events, and the game winning without taking advantages in the first, in a significance level of 5%.
+
+Result: observed differnce: 0.3 p-value = 1, fail to reject the null hypothesis. The observation we saw in our data did not happen due to random chance, so taking advantages in first three events is not related to winning the game.
+
