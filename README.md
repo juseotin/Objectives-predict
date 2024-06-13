@@ -104,3 +104,16 @@ I made another bar chart which displays the rate for Red team to win while not p
 
 * Missingness Dependency
   To investigate whether the missingness of event1 depends on the result column, I performed a permutation test.
+  
+* Null Hypothesis (H0): The missingness of event1 is independent of the game result.
+* Alternative Hypothesis (H1): The missingness of event1 is dependent on the game result.
+
+I used the difference in proportions of missing event1 between games that were won and games that were lost as an test statistics.
+  
+  <iframe
+  src="assets/NMAR.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
