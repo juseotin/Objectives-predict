@@ -54,6 +54,10 @@ The raw data was loaded from a CSV file containing various match statistics for 
 
 
 
+Univariate Charts
+
+In order to increase our awareness of the data, I produced an interactive pie chart using “plotly” that reprensents the percentage of the each teams taking the first, second and third objectives. 
+
 
 <iframe
   src="assets/eda1.html"
@@ -62,5 +66,5 @@ The raw data was loaded from a CSV file containing various match statistics for 
   frameborder="0"
 ></iframe>
 
-The pie chart shows the distribution of the First_Event_Red column, indicating whether the first event was advantageous for the Red team (1) or the Blue team (0). This visualization helps in understanding the frequency of the first event being advantageous for each team and its relation to the game result. The probability of red team taking the first objectives is 39%.
-I made two more pie charts for the second and third objective as well, red team had a probability of 41% to take the second objective, and 36.8% for the third objective.
+This pie chart shows the distribution of the First_Event_Red column, indicating whether the first event was advantageous for the Red team (1) or the Blue team (0). This visualization helps in understanding the frequency of the first event being advantageous for each team and its relation to the game result. The probability of red team taking the first objectives is 39%.
+I made two more pie charts for the second and third objective as well, red team had a probability of 41% to take the second objective, and 36.8% for the third objective. This pie chart showed that Red team has lower percentage of taking objectives than the Blue team.
