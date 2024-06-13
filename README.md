@@ -122,4 +122,4 @@ Observed Difference: 0
 P-value: 1
 
 With a P-value of 1, we fail to reject the null hypothesis, suggesting that the missingness of event1 is not significantly dependent on the game result.
-This also means that the game competition takes a good care of preventing the unknown accidents during the game. By performing this analysis, we can gain insights into whether the missingness of event1 is potentially NMAR and consider additional data that might help transform it to MAR.
+This also means that the game competition takes a good care of preventing the unknown accidents during the game, so it does not control the result of the game. By performing this analysis, I was able to gain insights into whether the missingness of event1 is potentially NMAR and consider additional data that might help transform it to MAR.
