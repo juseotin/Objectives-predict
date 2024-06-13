@@ -143,8 +143,7 @@ Prediction Problem: Predict whether a team wins the game based on their performa
 
 Response Variable: The response variable is result, which indicates whether the team won (1) or lost (0) the game. This binary outcome is crucial for understanding the effectiveness of early game advantages in determining the final outcome of the game.
 
-Evaluation Metric
-Chosen Metric: F1-score
+Evaluation Metric: F1-score
 
 Reason for Choosing F1-score:
 
@@ -190,3 +189,26 @@ F1-score: 0.695(increased from 0.65)
 
 Conclusion
 I decided to add the Total_Objectives since I am trying to find the relation between the objectives and the game result in a bigger pie. Before I built the baseline model, the first three objectives were not significant to the result of the game, so I started thinking about the position related to taking objectives which is jungle laner. I added the columns comparing the KDA of the jungle laners in each team so it could include the part that was never brought up before, and was found highly important. By adding new features (Total_Objectives and KDA_Difference) and the best working the hyperparameters, the final model is expected to improve upon the baseline model. The pipeline ensures that all preprocessing steps and model training are performed in a single step, making the process efficient and reproducible.
+
+
+## Fairness Analysis
+
+Group X: Teams with a high redJungleKDA (above the median value).
+
+Group Y: Teams with a low redJungleKDA (below or equal to the median value).
+
+Evaluation Metric: F-1 Score
+
+
+Hypotheses
+* Null Hypothesis (H0): The model's F1-score for high redJungleKDA teams and low redJungleKDA teams are roughly the same, and any differences are due to random chance.
+* Alternative Hypothesis (H1): The model's F1-score for high redJungleKDA teams is higher than its F1-score for low redJungleKDA teams.
+
+* Test Statistic: The difference in F1-scores between high redJungleKDA and low redJungleKDA teams.
+* Significance Level: 0.05
+
+p-value: 0.99
+
+Observed Difference: 0.13817487933550343
+
+We fail to reject the null hypothesis, with a p-value of 0.99, which indicates the Jungle laner's performance do not effect the result of the game. This concludes to that our model was fair, and the jungle laner's performance do not effect the game result.
