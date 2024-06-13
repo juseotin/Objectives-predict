@@ -54,7 +54,7 @@ The raw data was loaded from a CSV file containing various match statistics for 
 
 
 
-** Univariate Charts
+* Univariate Charts
 
 In order to increase our awareness of the data, I produced an interactive pie chart using “plotly” that reprensents the percentage of the each teams taking the first, second and third objectives. 
 
@@ -69,7 +69,7 @@ In order to increase our awareness of the data, I produced an interactive pie ch
 This pie chart shows the distribution of the First_Event_Red column, indicating whether the first event was advantageous for the Red team (1) or the Blue team (0). This visualization helps in understanding the frequency of the first event being advantageous for each team and its relation to the game result. The probability of red team taking the first objectives is 39%.
 I made two more pie charts for the second and third objective as well, red team had a probability of 41% to take the second objective, and 36.8% for the third objective. This pie chart showed that Red team has lower percentage of taking objectives than the Blue team.
 
-** Bivariate Charts
+* Bivariate Charts
 
 The bar chart displays the win(all objects secured) rate for the Red team when they secure the first objective. It shows the proportion of games won(perfectly securing object) when the Red team secures the first objective, compared to the total number of games. 
 
@@ -82,7 +82,9 @@ The bar chart displays the win(all objects secured) rate for the Red team when t
 
 I made another bar chart which displays the rate for Red team to win while not perfectly securing the first three objectives, when Red team did take the first objectives, or did not take the first objectives. Comnparing these two charts helps in understanding the significance of securing the first objective in the overall game outcome. This indicates that taking the first objectives helps team winning with all objectives secure, and they are going to have a different way other than winning by taking all objectives if the opponent team took the first objectives. 
 
-** Interesting Aggregates
+* Interesting Aggregates
+
+  While In the process of an interesting aggregate, I created a pivot table to show the mean of Red team taking each event are the columns, and the result of the game as the rows. It highlights the relationship between early game events and the overall game outcome, providing insights into how critical securing early objectives can be for winning the game.
 
 
 |   First_Event_Red |   Second_Event_Red |   Third_Event_Red |
