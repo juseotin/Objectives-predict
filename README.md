@@ -68,3 +68,16 @@ In order to increase our awareness of the data, I produced an interactive pie ch
 
 This pie chart shows the distribution of the First_Event_Red column, indicating whether the first event was advantageous for the Red team (1) or the Blue team (0). This visualization helps in understanding the frequency of the first event being advantageous for each team and its relation to the game result. The probability of red team taking the first objectives is 39%.
 I made two more pie charts for the second and third objective as well, red team had a probability of 41% to take the second objective, and 36.8% for the third objective. This pie chart showed that Red team has lower percentage of taking objectives than the Blue team.
+
+Bivariate Charts
+
+The bar chart displays the win(all objects secured) rate for the Red team when they secure the first objective. It shows the proportion of games won(perfectly securing object) when the Red team secures the first objective, compared to the total number of games. 
+
+<iframe
+  src="assets/eda2.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+I made another bar chart which displays the rate for Red team to win while not perfectly securing the first three objectives, when Red team did take the first objectives, or did not take the first objectives. Comnparing these two charts helps in understanding the significance of securing the first objective in the overall game outcome. This indicates that taking the first objectives helps team winning with all objectives secure, and they are going to have a different way other than winning by taking all objectives if the opponent team took the first objectives. 
